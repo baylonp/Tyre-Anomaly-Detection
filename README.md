@@ -64,7 +64,7 @@ Data augmentation on the other hand is useful when there is a small number of tr
 It will be implemented by using `tf.keras.layers.RandomFlip()`, `tf.keras.layers.RandomRotation()` and `tf.keras.layers.RandomZoom()`.
 Code will look like this:
 
-'''
+```
 data_augmentation = keras.Sequential(
   [
     layers.RandomFlip("horizontal",
@@ -75,8 +75,7 @@ data_augmentation = keras.Sequential(
     layers.RandomZoom(0.1),
   ]
 )
-
-'''
+```
 
 
 ## The hearth
