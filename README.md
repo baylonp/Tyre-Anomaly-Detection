@@ -226,3 +226,24 @@ This is the result.
 Later I will show you the difference it made regarding the metrics.
 
 
+## A cute discovery: Texture Recognition
+
+Since I wanted to push the work a little bit forward and try something new, I decided to sudy a little bit Texture Recognition. Basically i computed the Gray-Level Co-occurence Matrix (GLCM) to etract the following feature: Contrast, Correlation, Energy and Homogeneity. But none showed some interesting results.
+
+So I kept studying and decided to apply the Gabor Filter to pictures. This filter has been shown to possess optimal localization properties in both spatial and frequency domains and thus is well-suited for texture segmentation problems. 
+
+It is a linear, bandpass filter useful for feature extraction. 
+
+This filter tells us when a tyre is very very old, can detect the wrinkles in it and all the not-common lines
+
+
+The original tyre:
+
+![Original](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Defective%20(878).jpg)
+
+
+The gabor Filtered tyre:
+
+![Gabor Filtered](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/gabor_defective.png)
+
+
