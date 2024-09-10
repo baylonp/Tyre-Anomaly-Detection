@@ -139,13 +139,62 @@ Here are some examples of Accuracy and Loss graphs.
 
 As you can see, in the second picture, the curves are very distant from one another. A clear sign of overfitting.
 
-Other important metrics we used to validte our model were:
-- Precision: The precision is calculated as the ratio between the number of Positive samples correctly classified
-to the total number of samples classified as Positive (either correctly or incorrectly). ### The precision
-measures the model's accuracy in classifying a sample as positive. When the precision is high, you
+Other important metrics we used to validate our model were:
+- **Precision**: **TP/(TP +FP)**
+  The precision is calculated as the ratio between the number of Positive samples correctly classified(TP)
+to the total number of samples classified as Positive (either correctly(TP) or incorrectly(FP)).  **The precision
+measures the model's accuracy in classifying a sample as positive**. When the precision is high, you
 can trust the model when it predicts a sample as Positive. Thus, the precision helps to know how
 the model is accurate when it says that a sample is Positive.
-- Recall: 
+
+- **Recall**: **TP/(TP +FN)**
+The recall is calculated as the ratio between the number of Positive samples correctly classified as
+Positive(TP) to the total number of Positive samples(TP + FN). The recall measures the model's ability to detect
+Positive samples. **The higher the recall, the more positive samples detected.**
+The recall cares only about how the positive samples are classified. This is independent of how the
+negative samples are classified, e.g. for the precision. When the model classifies all the positive
+samples as Positive, then the recall will be 100% even if all the negative samples were
+incorrectly classified as Positive.
+
+- **F1-Score:**
+The F1 score is the harmonic mean of precision and recall. It provides a single metric that balances
+the trade-off between precision and recall. The F1 score is useful when you need a balance between
+precision and recall, and there is an uneven class distribution. It ranges from 0 to 1, where 1
+indicates perfect precision and recall.
+
+- **Confusion Matrix:**
+It visually represent how the model scored in classifying never-seen-before images.
+
+[Know more about the metrics -1 ](https://blog.paperspace.com/deep-learning-metrics-precision-recall-accuracy/)
+
+[Know more about the metrics -2 ](https://medium.com/enjoy-algorithm/methods-to-check-the-performance-of-the-classificationmodels-55ec50e0a914)
+
+Here is an example of a confusion matrix:
+![Confusion Matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/confusion_matrix.png)
+
+Ideally, you would want to have 1 in PredictedGood-TrueGood and 1 in PredictedDefective-TrueDefective
+
+The code for the confusion matrix is provided, but it all resort to this:
+
+
+```
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+y_pred = model.predict(test_ds)
+y_pred_labels = np.argmax(y_pred, axis=1)
+
+y_true_labels = np.concatenate([y for x, y in test_ds], axis=0)
+cm = confusion_matrix(y_true_labels, y_pred_labels)
+
+#normalize, so that the data is in percentages
+cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+
+
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_normalized, display_labels=class_names)
+disp.plot(cmap=plt.cm.Blues)
+plt.show()
+
+```
 
 
 ## Image processing
