@@ -167,3 +167,4 @@ This is the result.
 ![The whole](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/whole_picture.png)
 
 
+
