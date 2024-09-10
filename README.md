@@ -15,7 +15,7 @@ What I used is:
 
 - Jupyter Notebook in Anaconda environment for Linux
 - NVIDIA RTX 2070Super
-- Among all the libraries, I worked alot with Keras and Tensorflow
+- Among all the libraries, I worked alot with Keras and Tensorflow an OpenCV
 
 
 
@@ -136,6 +136,21 @@ Here are some examples of Accuracy and Loss graphs.
 
 ![Less Overfitting](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/graph2.png)
 ![Overfitting present](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/graph_1.jpg)
+
+As you can see, in the second picture, the curves are very distant from one another. A clear sign of overfitting.
+
+
+## Image processing
+
+As of now, the model works but it is not that good. We need to optimize it a bit. And we can optimize it by feeding it with better data. How do we improve our data?
+
+Via the python image processing library I could study and enhance a bit more the data quality, showing to the model what were the actual feature it had to be trained on.
+
+My journey through image processing took me to 8 different filters applied to the pictures, to end up with a filter that add the contour of the actual tyre defects to the picture. So I had the idea to try to feed this type of picture to the model, a sort of picture on steroid in which the defects are highlighted.
+
+In my head this would improve the model since a non defective tyre has contours that are mostly symmetrical and right, not just scattered around like  defective tyre.
+
+
 
 
 
