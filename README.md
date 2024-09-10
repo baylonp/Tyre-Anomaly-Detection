@@ -237,13 +237,15 @@ It is a linear, bandpass filter useful for feature extraction.
 This filter tells us when a tyre is very very old, can detect the wrinkles in it and all the not-common lines
 
 
-The original tyre:
+**The original tyre:**
 
 ![Original](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Defective%20(878).jpg)
 
 
-The gabor Filtered tyre:
+**The gabor Filtered tyre:**
 
 ![Gabor Filtered](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/gabor_defective.png)
 
+
+As you can see, all the wrinkles get accentuated. This is very cool.
 
