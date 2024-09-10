@@ -139,6 +139,14 @@ Here are some examples of Accuracy and Loss graphs.
 
 As you can see, in the second picture, the curves are very distant from one another. A clear sign of overfitting.
 
+Other important metrics we used to validte our model were:
+- Precision: The precision is calculated as the ratio between the number of Positive samples correctly classified
+to the total number of samples classified as Positive (either correctly or incorrectly). ### The precision
+measures the model's accuracy in classifying a sample as positive. When the precision is high, you
+can trust the model when it predicts a sample as Positive. Thus, the precision helps to know how
+the model is accurate when it says that a sample is Positive.
+- Recall: 
+
 
 ## Image processing
 
@@ -166,5 +174,6 @@ This is the result.
 
 ![The whole](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/whole_picture.png)
 
+Later I will show you the difference it made regarding the metrics.
 
 
