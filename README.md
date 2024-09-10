@@ -80,3 +80,59 @@ data_augmentation = keras.Sequential(
 
 ## The heart
 
+If you read this far, now it is time to show you the heart of the machine. The actual layers of the model.
+
+```
+model = Sequential([
+
+  tf.keras.Input(shape=(img_height, img_width, 3)),
+  data_augmentation,
+  layers.Rescaling(1./255),
+  layers.Conv2D(16, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(32, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(64, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Dropout(0.2),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(num_classes, name="outputs")
+])
+
+```
+
+Here you can see the different layers which the model is composed of. First there is the `input layer` that set the shape  decided for the trianing, then the `data_augmentation` layer ( see above ). After the rescaling layers there are layers that we didn't meet before. What are they?
+
+- `layers.Conv2D()` this layer applies 16 different filters (kernels) to the images to study all of its features. We see hoe later it is applied 2 ore times with 32 and 64 filters to better extract all the features from the pictures. Attention shoudl be paid to the type of the activation function, in this cased I used the ReLU (Rectified Linear Unit). Activation funtions brings non linearity into the models, since otherwise big models wouuld  be unable to "learn" and aply the rules to never seen complex task, resulting in just linear regression models. See more [here](https://www.v7labs.com/blog/neural-networks-activation-functions)
+
+- `layers.MaxPooling2D()` this layer divides the input feature map into a pool of smaller regions (usually squares) and takes the maximum value from each region. This operation helps to keep the strongest features while discarding irrelevant information.
+
+- `layers.Flatten()` It reshapes data, going from a multi-dimensional feature maps into a single dimension
+
+## Let's run it
+
+Finally, it is time to run it and wait for it finish. 
+
+## INSERIRE OVERVIEW DEL MODELLO; CHIEDERE A LORENZO LO SCREEENshot
+
+We compile the code and we choose how many epochs ( th enumber of time the model will see the data)
+
+```
+epochs = #epochs
+history = model.fit(
+  train_ds,
+  validation_data=val_ds,
+  epochs=epochs
+)
+```
+
+
+## The most importan part: How to validate a model?
+
+To validate a model, we used different metrics. First of all the graphs created after the run ( code provided ) need to show a trend in which Training_Accuracy and Validation_Accuracy are very close to each other in a way such that the infamous Overfitting is not present.
+
+Here are some examples of Accuracy and Loss graphs.
+
+
+
