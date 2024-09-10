@@ -1,5 +1,5 @@
 # Tyre-Anomaly-Detection
-Little summer project to study deep learning using Tensorflow and Keras. The aim is to recognise when a tyre ha problems or defects by its picture(s)
+Little summer project to study deep learning using Tensorflow and Keras. The aim is to recognise when a tyre has problems or defects by its picture(s)
 
 
 ## What is it?
@@ -29,7 +29,7 @@ As I see, this it ultimately true. I started using a dataset of about 2000 pictu
 
 
 ## What is a deep learning model and where to start building one?
-A deep learning model is basically gropu of layers that apply to each input some trasformation. These transformations get repetead again and again, usually with a feedback model that re-input the previosu results in the system to better evaluate the so caled weights, the represent connections between nodes in different layers.
+A deep learning model is basically a group of layers that apply to each input some trasformation. These transformations get repetead again and again, usually with a feedback model that re-input the previosu results in the system to better evaluate the so caled weights, they represent connections between nodes in different layers.
 
 In my case I used the `tf.keras.Sequential` model, as I understood it is a good place to start for a beginner. This model is a linear ( sequential ) stack of layers where each layer has exactly one input tensor and one output tensor.
 
@@ -40,7 +40,7 @@ Code-wise, this is expressed in python using the function `tf.keras.utils.image_
 
 ## Data standardization
 
-Before building te actual model, it is important to standardize the values we use to describe a picture. Generally, each RGB channel value is in the range of [0,255], but neural networks  wants small input values. The main reason is because the network has to deal with very big number during the trainig if we don't scale them. These big number can actually stall the learning or making it extremely inefficient. Usually, activation function used by neurasl networks, can saturate easily when deleing with big numbers, so we resize.
+Before building te actual model, it is important to standardize the values we use to describe a picture. Generally, each RGB channel value is in the range of [0,255], but neural networks  wants small input values. The main reason is because the network has to deal with very big number during the trainig and if we don't scale them, these big number can actually stall the learning or making it extremely inefficient. Usually, activation function used by neural networks, can saturate easily when dealing with big numbers, so we resize.
 
 how do we do that? We use the `tf.keras.layers.Rescaling()` function that will end up looking like this:
 
@@ -50,8 +50,8 @@ how do we do that? We use the `tf.keras.layers.Rescaling()` function that will e
 You may ask yoursel how do we actually use it. Keep reading.
 
 ## Fine tuning
-Usually, this step is performed later after noticing how the actual model has performed after the first run. The keep away from what is referred to "overfitting" we added a `dropout` layer and a `data_augmentation` layer.
-AS the offical Tensoflow documentation states: 
+Usually, this step is performed later after noticing how the actual model has performed after the first run. The keep away from what is referred to as "overfitting" we added a `dropout` layer and a `data_augmentation` layer.
+As the offical Tensoflow documentation states: 
 
 #### Dropout regularization removes a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization.
 
@@ -59,7 +59,7 @@ AS the offical Tensoflow documentation states:
 The actual code added to the final model is: `layers.Dropout(0.2)` where 0.2 meaning that it drops out 20% of the ouput units randomly from the applied layer
 
 
-Data augmentation on the other hand is useful when there is a small number of training examples. Wha it does is genratin gaddition picture by taking the original one and flipping, zooming and rotating them. This helps expose the model to more aspects of the data and generalize better.
+Data augmentation on the other hand is useful when there is a small number of training examples. Wha it does is generating additional pictures by taking the original ones and flipping, zooming and rotating them. This helps expose the model to more aspects of the data and generalize better.
 
 It will be implemented by using `tf.keras.layers.RandomFlip()`, `tf.keras.layers.RandomRotation()` and `tf.keras.layers.RandomZoom()`.
 Code will look like this:
@@ -78,5 +78,5 @@ data_augmentation = keras.Sequential(
 ```
 
 
-## The hearth
+## The heart
 
