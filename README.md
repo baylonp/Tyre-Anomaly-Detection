@@ -160,5 +160,10 @@ This one instead has a more scattered plot, due to the defect.
 ![Defect](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/defect_contour.png)
 
 
+In general, as I needed to have a general picture of what the filters were doing to the images, I wrote a little code to show them, and this is the cute output result.
+
+This is the result.
+
+![The whole](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/whole_picture.png)
 
 
