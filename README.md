@@ -150,7 +150,14 @@ My journey through image processing took me to 8 different filters applied to th
 
 In my head this would improve the model since a non defective tyre has contours that are mostly symmetrical and right, not just scattered around like  defective tyre.
 
+As you can see, this picture of a GOOD tyre has a more symmetrical contour line
 
+![Good](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/good_contour.png)
+
+
+This one instead has a more scattered plot, due to the defect.
+
+![Defect](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/defect_contour.png)
 
 
 
