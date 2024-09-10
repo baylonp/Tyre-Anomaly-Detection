@@ -134,5 +134,8 @@ To validate a model, we used different metrics. First of all the graphs created 
 
 Here are some examples of Accuracy and Loss graphs.
 
+[https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/graph2.png]
+
+
 
 
