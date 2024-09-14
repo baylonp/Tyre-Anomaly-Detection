@@ -35,7 +35,7 @@ TLDR:
   
  - [Room For Improvement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#room-for-improvement)
 
- - [Final notes]([Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#final-notes))
+ - [Final notes](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#final-notes)
 
 
 ## BOM: Bill Of material
