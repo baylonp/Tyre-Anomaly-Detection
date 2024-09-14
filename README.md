@@ -201,7 +201,7 @@ plt.show()
 
 As of now, the model works but it is not that good. We need to optimize it a bit. And we can optimize it by feeding it with better data. How do we improve our data?
 
-Via the python image processing library I could study and enhance a bit more the data quality, showing to the model what were the actual feature it had to be trained on.
+Via the python image processing library I thought of enhancing a bit more the data quality, showing to the model what were the actual feature it had to be trained on.
 
 My journey through image processing took me to 8 different filters applied to the pictures, to end up with a filter that add the contour of the actual tyre defects to the picture. So I had the idea to try to feed this type of picture to the model, a sort of picture on steroid in which the defects are highlighted.
 
@@ -223,7 +223,7 @@ This is the result.
 
 ![The whole](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/whole_picture.png)
 
-Later I will show you the difference it made regarding the metrics.
+Later I will show you the difference it made regarding the metrics, but I can ancticipate you that the results were not that better, I would say even worse.
 
 
 ## A cute discovery: Texture Recognition
@@ -248,4 +248,16 @@ This filter tells us when a tyre is very very old, can detect the wrinkles in it
 
 
 As you can see, all the wrinkles get accentuated. This is very cool.
+
+
+## Final run: let's study the results
+
+I will show you now the different results we had with the various dataset.
+- Dataset N.1 = Pictures dataset downloaded from internet
+- Dataset N.2 = Pictures Dataset downloaded from internet + added picture taken by us
+- Dataset N.3 = Pictures Dataset downloaded from internet **with contour on** + added picture taken by us **with contour on**
+
+  ### Dataset N.1
+
+  
 
