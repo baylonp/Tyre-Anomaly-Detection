@@ -10,7 +10,7 @@ The idea is to build a simple binary classificator that tells me if a tyre is GO
 
 ## TLDR:
 SKip it all and go directly to the [final results](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#final-run-lets-study-the-results) :)
-
+Check out the Jupyter Notebook [here](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/Notebook-tyres.ipynb), the image processing code [here](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/image_process.py) and the texture recognition code [here](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/texture_recognition.py)
 
 
 ## Table of Content
