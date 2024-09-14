@@ -114,9 +114,11 @@ Here you can see the different layers which the model is composed of. First ther
 
 Finally, it is time to run it and wait for it finish. 
 
-## INSERIRE OVERVIEW DEL MODELLO; CHIEDERE A LORENZO LO SCREEENshot
+From the screenshot below, we can see that the model will be trained on a total of 22MLN parameters
 
-We compile the code and we choose how many epochs ( th enumber of time the model will see the data)
+![Trainable Parameters](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring1.png)
+
+We compile the code and we choose how many epochs ( the number of time the model will see the data)
 
 ```
 epochs = #epochs
@@ -252,13 +254,33 @@ As you can see, all the wrinkles get accentuated. This is very cool.
 
 ## Final run: let's study the results
 
-I will show you now the different results we had with the various dataset.
+I will show you now the different results we had with the various dataset. We tested the model resulted fromthe training on these 4 dataset with a test batch of pictures: 10 GOOD and 10 Defective
+
 - Dataset N.1 = Pictures dataset downloaded from internet
 - Dataset N.2 = Pictures dataset downloaded from internet **with contour on** 
 - Dataset N.3 = Pictures Dataset downloaded from internet + added picture taken by us
 - Dataset N.4 = Pictures Dataset downloaded from internet **with contour on** + added picture taken by us **with contour on**
 
-  ### Dataset N.1
 
+  ### Dataset N.1
+  With this dataset we obtained:
+  - Precision = 0.76
+  - Recall = 0.71
+  - F1_score = 0.71
+
+  ![Datset1](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/no_contouring2.png)
+
+  ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/no_contouring4.png)
+
+
+  ### Dataset N.2
+
+  With this dataset we obtained:
+  - Precision = 0.66
+  - Recall = 0.65
+  - F1_score = 0.64
+
+  ![Datset2](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring2.png)
+  ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring4.png)
   
 
