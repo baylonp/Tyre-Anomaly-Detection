@@ -32,9 +32,9 @@ TLDR:
   
     -[Pictures Dataset Downloaded From The Internet With Contour On + Added Picture Taken By Us With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n4--pictures-dataset-downloaded-from-the-internet-with-contour-on--added-picture-taken-by-us-with-contour-on)
   
--[Room For Improvement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#room-for-improvement)
+ -[Room For Improvement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#room-for-improvement)
 
--[Final notes](Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on)
+ -[Final notes]([Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#final-notes))
 
 
 ## BOM: Bill Of material
