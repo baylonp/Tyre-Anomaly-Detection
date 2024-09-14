@@ -254,8 +254,9 @@ As you can see, all the wrinkles get accentuated. This is very cool.
 
 I will show you now the different results we had with the various dataset.
 - Dataset N.1 = Pictures dataset downloaded from internet
-- Dataset N.2 = Pictures Dataset downloaded from internet + added picture taken by us
-- Dataset N.3 = Pictures Dataset downloaded from internet **with contour on** + added picture taken by us **with contour on**
+- Dataset N.2 = Pictures dataset downloaded from internet **with contour on** 
+- Dataset N.3 = Pictures Dataset downloaded from internet + added picture taken by us
+- Dataset N.4 = Pictures Dataset downloaded from internet **with contour on** + added picture taken by us **with contour on**
 
   ### Dataset N.1
 
