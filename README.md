@@ -24,17 +24,18 @@ TLDR:
 - [The Most Importan Part: How To Validate A Model?](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#the-most-importan-part-how-to-validate-a-model)
 - [Image Processing](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#image-processing)
 - [A Cute DIscovery: Texture Recognition](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#a-cute-discovery-texture-recognition)
-- [FInal RUn: Let's Study The Results](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#final-run-lets-study-the-results)
-    -[Pictures Dataset Downloaded From the Internet](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#dataset-n1--pictures-dataset-downloaded-from-the-internet)
-    -[Pictures Dataset Downloaded From The Internet With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n2--pictures-dataset-downloaded-from-the-internet-with-contour-on)
+- [Final Run: Let's Study The Results](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#final-run-lets-study-the-results)
   
-    -[Pictures Dataset Downloaded From The Internet  + Added Picture Taken By Us](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n3--pictures-dataset-downloaded-from-the-internet--added-picture-taken-by-us)
+    - [Pictures Dataset Downloaded From the Internet](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#dataset-n1--pictures-dataset-downloaded-from-the-internet)
+    - [Pictures Dataset Downloaded From The Internet With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n2--pictures-dataset-downloaded-from-the-internet-with-contour-on)
   
-    -[Pictures Dataset Downloaded From The Internet With Contour On + Added Picture Taken By Us With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n4--pictures-dataset-downloaded-from-the-internet-with-contour-on--added-picture-taken-by-us-with-contour-on)
+    - [Pictures Dataset Downloaded From The Internet  + Added Picture Taken By Us](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n3--pictures-dataset-downloaded-from-the-internet--added-picture-taken-by-us)
   
- -[Room For Improvement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#room-for-improvement)
+    - [Pictures Dataset Downloaded From The Internet With Contour On + Added Picture Taken By Us With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n4--pictures-dataset-downloaded-from-the-internet-with-contour-on--added-picture-taken-by-us-with-contour-on)
+  
+ - [Room For Improvement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#room-for-improvement)
 
- -[Final notes]([Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#final-notes))
+ - [Final notes]([Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#final-notes))
 
 
 ## BOM: Bill Of material
