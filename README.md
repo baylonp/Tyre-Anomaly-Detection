@@ -261,7 +261,7 @@ I will show you now the different results we had with the various dataset. We te
 - Dataset N.4 = Pictures Dataset downloaded from internet **with contour on** + added picture taken by us **with contour on**
 
 
-  ### Dataset N.1 : Pictures dataset downloaded from internet
+  ### Dataset N.1 : Pictures dataset downloaded from the internet
   With this dataset we obtained:
   - Precision = 0.76
   - Recall = 0.71
@@ -272,7 +272,7 @@ I will show you now the different results we had with the various dataset. We te
   ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/no_contouring4.png)
 
 
-  ### Dataset N.2 : Pictures dataset downloaded from internet with contour on 
+  ### Dataset N.2 : Pictures dataset downloaded from the internet with contour on 
 
   With this dataset we obtained:
   - Precision = 0.66
@@ -283,7 +283,7 @@ I will show you now the different results we had with the various dataset. We te
   ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring4.png)
 
 
-  ### Dataset N.3 : Pictures Dataset downloaded from internet + added picture taken by us
+  ### Dataset N.3 : Pictures Dataset downloaded from the internet + added picture taken by us
 
   With this dataset we obtained:
   - Precision = 0.86
@@ -294,7 +294,7 @@ I will show you now the different results we had with the various dataset. We te
   ![Dataset_3_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/no_contouring_4.png)
 
 
-  ### Dataset N.4 : Pictures Dataset downloaded from internet **with contour on** + added picture taken by us with contour on
+  ### Dataset N.4 : Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on
 
   With this dataset we obtained:
   - Precision = 0.55
