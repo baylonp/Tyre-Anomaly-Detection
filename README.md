@@ -8,6 +8,31 @@ As everything tho, without a project to actually test the theory it would have a
 
 The idea is to build a simple binary classificator that tells me if a tyre is GOOD or DEFECTIVE: let's start simple.
 
+TLDR:
+
+
+## Table of Content
+
+- [BOM: Bill Of Material](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#bom-bill-of-material)
+- [Where To Get The Data?](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#where-to-get-the-data)
+- [What Is A Deep Learning Model And Where To Start Building One](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#what-is-a-deep-learning-model-and-where-to-start-building-one)
+- [Validation Split = 0.2](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#validation_split--02)
+- [Data Standardization](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#data-standardization)
+- [Fine Tuning](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#fine-tuning)
+- [The Heart](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#the-heart)
+- [Let's Run It](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#lets-run-it)
+- [The Most Importan Part: How To Validate A Model?](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#the-most-importan-part-how-to-validate-a-model)
+- [Image Processing](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#image-processing)
+- [A Cute DIscovery: Texture Recognition](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#a-cute-discovery-texture-recognition)
+- [FInal RUn: Let's Study The Results](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#final-run-lets-study-the-results)
+    -[Pictures Dataset Downloaded From the Internet](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#dataset-n1--pictures-dataset-downloaded-from-the-internet)
+    -[Pictures Dataset Downloaded From The Internet With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n2--pictures-dataset-downloaded-from-the-internet-with-contour-on)
+    -[Pictures Dataset Downloaded From The Internet  + Added Picture Taken By Us](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n3--pictures-dataset-downloaded-from-the-internet--added-picture-taken-by-us)
+    -[Pictures Dataset Downloaded From The Internet With Contour On + Added Picture Taken By Us With Contour On](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#dataset-n4--pictures-dataset-downloaded-from-the-internet-with-contour-on--added-picture-taken-by-us-with-contour-on)
+-[Room For Improvement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#room-for-improvement)
+-[Final notes](Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on)
+
+
 ## BOM: Bill Of material
 
 What I used is:
@@ -261,7 +286,7 @@ I will show you now the different results we had with the various dataset. We te
 - Dataset N.4 = Pictures Dataset downloaded from internet **with contour on** + added picture taken by us **with contour on**
 
 
-  ### Dataset N.1 : Pictures dataset downloaded from the internet
+  ### Dataset N.1 : Pictures dataset downloaded from internet
   With this dataset we obtained:
   - Precision = 0.76
   - Recall = 0.71
@@ -272,7 +297,7 @@ I will show you now the different results we had with the various dataset. We te
   ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/no_contouring4.png)
 
 
-  ### Dataset N.2 : Pictures dataset downloaded from the internet with contour on 
+  ### Dataset N.2 : Pictures dataset downloaded from internet with contour on 
 
   With this dataset we obtained:
   - Precision = 0.66
@@ -283,7 +308,7 @@ I will show you now the different results we had with the various dataset. We te
   ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring4.png)
 
 
-  ### Dataset N.3 : Pictures Dataset downloaded from the internet + added picture taken by us
+  ### Dataset N.3 : Pictures Dataset downloaded from internet + added picture taken by us
 
   With this dataset we obtained:
   - Precision = 0.86
@@ -294,7 +319,7 @@ I will show you now the different results we had with the various dataset. We te
   ![Dataset_3_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/no_contouring_4.png)
 
 
-  ### Dataset N.4 : Pictures Dataset downloaded from the internet with contour on + added picture taken by us with contour on
+  ### Dataset N.4 : Pictures Dataset downloaded from internet **with contour on** + added picture taken by us with contour on
 
   With this dataset we obtained:
   - Precision = 0.55
@@ -311,5 +336,5 @@ There is much more to do, starting from fine tuning the model better to  impleme
 
 ## Final Notes
 
-This project could have not been complted succesfully without the help of [Lorenzo Cozzani] (https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped running the model on his juicy NVIDIA RTX 2070Super
+This project could have not been complted succesfully without the help of [Lorenzo Cozzani](https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped running the model on his juicy NVIDIA RTX 2070Super
 
