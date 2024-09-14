@@ -1,7 +1,6 @@
 # Tyre-Anomaly-Detection
 Little summer project to study deep learning using Tensorflow and Keras. The aim is to recognise when a tyre has problems or defects by its picture(s)
 
-
 ## What is it?
 
 After a little bit of vacation I could't just wait for classes to start again and so I decided to begin studying deep learning and approaching myself to this field. 
@@ -14,7 +13,7 @@ The idea is to build a simple binary classificator that tells me if a tyre is GO
 What I used is:
 
 - Jupyter Notebook in Anaconda environment for Linux
-- NVIDIA RTX 2070Super
+- NVIDIA RTX 2070Super (Offered by [ArkWow](https://github.com/Arkw0w))
 - Among all the libraries, I worked alot with Keras and Tensorflow an OpenCV
 
 
@@ -306,4 +305,11 @@ I will show you now the different results we had with the various dataset. We te
  ![Dataset_3_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/contouring_4.png)
 
 
-  
+## Room for improvement
+
+There is much more to do, starting from fine tuning the model better to  implement a precise defect detection on the tyre using [Mask_RNCC](https://github.com/matterport/Mask_RCNN)
+
+## Final Notes
+
+This project could have not been complted succesfully without the help of [Lorenzo Cozzani] (https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped running the model on his juicy NVIDIA RTX 2070Super
+
