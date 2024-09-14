@@ -56,7 +56,7 @@ Let's start by quoting some words I have been found again and again in the endle
 
 `A deep learning model is as agood as its dataset`
 
-As I see, this it ultimately true. I started using a dataset of about 2000 pictures of tyres, in which 65% were GOOD tyres, adn 45% DEFECTIVE tyres, but after some trials and errors, I decided to get some help by a colleague of mine [@Arkw0w](https://github.com/Arkw0w) and go ask car dealers to take pictures of tyres. What we were looking for was GOOD tyres pictures, especially tread pictures and also close up of defects. We managed to increase the dataset by 500 pictures, evenly distributed among the 2 categories we were lacking.
+As I see, this it ultimately true. I started using a dataset of about 2000 pictures of tyres, in which 65% were GOOD tyres, and 45% DEFECTIVE tyres, but after some trials and errors, I decided to get some help by a colleague of mine [@Arkw0w](https://github.com/Arkw0w) and go ask car dealers to take pictures of tyres. What we were looking for was GOOD tyres pictures, especially tread pictures and also close up of defects. We managed to increase the dataset by 500 pictures, evenly distributed among the 2 categories we were lacking.
 
 
 ## What is a deep learning model and where to start building one?
@@ -65,15 +65,15 @@ A deep learning model is basically a group of layers that apply to each input so
 In my case I used the `tf.keras.Sequential` model, as I understood it is a good place to start for a beginner. This model is a linear ( sequential ) stack of layers where each layer has exactly one input tensor and one output tensor.
 
 ## Validation_split = 0.2
-The model doesn't need just a dataset of GOOD and DEFECTIVE pictures, but a subset of these as `training_dataset` and another one as a `validation_dataset`, on which to test the results obtained from the training on the `training_dataset` and on which metrics will be computed to evalutate the performance of the model.
+The model doesn't need just a dataset of GOOD and DEFECTIVE pictures, but a subset of these as `training_dataset` and another one as a `validation_dataset`, on which to test the results obtained from the training on the `training_dataset`.
 
 Code-wise, this is expressed in python using the function `tf.keras.utils.image_dataset_from_directory()` specifying the parameter `validation_split = 0.2`, meaning that 80% of the images will be used for training and 20% for validation.
 
 ## Data standardization
 
-Before building te actual model, it is important to standardize the values we use to describe a picture. Generally, each RGB channel value is in the range of [0,255], but neural networks  wants small input values. The main reason is because the network has to deal with very big number during the trainig and if we don't scale them, these big number can actually stall the learning or making it extremely inefficient. Usually, activation function used by neural networks, can saturate easily when dealing with big numbers, so we resize.
+Before building te actual model, it is important to standardize the values we use to describe a picture. Generally, each RGB channel value is in the range of [0,255], but neural networks  want small input values. The main reason is because the network has to deal with very big numbers during the trainig and if we don't scale them, these big numbers can actually stall the learning or making it extremely inefficient. Usually, activation function used by neural networks can saturate easily when dealing with big numbers, so we resize.
 
-how do we do that? We use the `tf.keras.layers.Rescaling()` function that will end up looking like this:
+How do we do that? We use the `tf.keras.layers.Rescaling()` function that will end up looking like this:
 
 `normalization_layer = layers.Rescaling(1./255)`
 
@@ -81,8 +81,9 @@ how do we do that? We use the `tf.keras.layers.Rescaling()` function that will e
 You may ask yoursel how do we actually use it. Keep reading.
 
 ## Fine tuning
-Usually, this step is performed later after noticing how the actual model has performed after the first run. The keep away from what is referred to as "overfitting" we added a `dropout` layer and a `data_augmentation` layer.
-As the offical Tensoflow documentation states: 
+Usually, this step is performed later after noticing how the actual model has performed after the first run. To keep away from what is referred to as "overfitting" we added a `dropout` layer and a `data_augmentation` layer.
+
+As the offical Tensorflow documentation states: 
 
 #### Dropout regularization removes a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization.
 
@@ -90,7 +91,7 @@ As the offical Tensoflow documentation states:
 The actual code added to the final model is: `layers.Dropout(0.2)` where 0.2 meaning that it drops out 20% of the ouput units randomly from the applied layer
 
 
-Data augmentation on the other hand is useful when there is a small number of training examples. Wha it does is generating additional pictures by taking the original ones and flipping, zooming and rotating them. This helps expose the model to more aspects of the data and generalize better.
+Data augmentation on the other hand is useful when there is a small number of training examples. What it does is generating additional pictures by taking the original ones and flipping, zooming and rotating them. This helps expose the model to more aspects of the data and generalize better.
 
 It will be implemented by using `tf.keras.layers.RandomFlip()`, `tf.keras.layers.RandomRotation()` and `tf.keras.layers.RandomZoom()`.
 Code will look like this:
@@ -111,7 +112,7 @@ data_augmentation = keras.Sequential(
 
 ## The heart
 
-If you read this far, now it is time to show you the heart of the machine. The actual layers of the model.
+If you have read this far, now it is time to show you the heart of the machine. The actual layers of the model.
 
 ```
 model = Sequential([
@@ -133,23 +134,23 @@ model = Sequential([
 
 ```
 
-Here you can see the different layers which the model is composed of. First there is the `input layer` that set the shape  decided for the trianing, then the `data_augmentation` layer ( see above ). After the rescaling layers there are layers that we didn't meet before. What are they?
+Here you can see the different layers which the model is composed of. First there is the `input layer` that set the shape  decided for the training, then the `data_augmentation` layer ( see above ). After the rescaling layers there are layers that we haven't met before. What are they?
 
-- `layers.Conv2D()` this layer applies 16 different filters (kernels) to the images to study all of its features. We see hoe later it is applied 2 ore times with 32 and 64 filters to better extract all the features from the pictures. Attention shoudl be paid to the type of the activation function, in this cased I used the ReLU (Rectified Linear Unit). Activation funtions brings non linearity into the models, since otherwise big models wouuld  be unable to "learn" and aply the rules to never seen complex task, resulting in just linear regression models. See more [here](https://www.v7labs.com/blog/neural-networks-activation-functions)
+- `layers.Conv2D()` this layer applies 16 different filters (kernels) to the images to study all of its features. We can see how later it is applied two more times with 32 and 64 filters to better extract all the features from the pictures. Attention should be paid to the type of the activation function, in this case I used the ReLU (Rectified Linear Unit). Activation funtions bring non linearity into the models, since otherwise big models would  be unable to "learn" and apply the rules to never seen complex task, resulting in just linear regression models. See more [here](https://www.v7labs.com/blog/neural-networks-activation-functions)
 
 - `layers.MaxPooling2D()` this layer divides the input feature map into a pool of smaller regions (usually squares) and takes the maximum value from each region. This operation helps to keep the strongest features while discarding irrelevant information.
 
-- `layers.Flatten()` It reshapes data, going from a multi-dimensional feature maps into a single dimension
+- `layers.Flatten()`  reshapes data, going from a multi-dimensional feature maps into a single dimension
 
 ## Let's run it
 
-Finally, it is time to run it and wait for it finish. 
+Finally, it is time to run it and wait patiently for it to finish. 
 
-From the screenshot below, we can see that the model will be trained on a total of 22MLN parameters
+From the screenshot below, you can see that that specific rum will make use of 22MLN parameters to train the model.
 
 ![Trainable Parameters](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring1.png)
 
-We compile the code and we choose how many epochs ( the number of time the model will see the data)
+I compile the code and choose the number of epochs ( the number of time the model will see the data)
 
 ```
 epochs = #epochs
@@ -161,9 +162,9 @@ history = model.fit(
 ```
 
 
-## The most importan part: How to validate a model?
+## The most importat part: How to validate a model?
 
-To validate a model, we used different metrics. First of all the graphs created after the run ( code provided ) need to show a trend in which Training_Accuracy and Validation_Accuracy are very close to each other in a way such that the infamous Overfitting is not present.
+To validate a model, I used different metrics. First of all the graphs created after the run ( code provided ) need to show a trend in which Training_Accuracy and Validation_Accuracy are very close to each other in a way such that the infamous Overfitting is not present.
 
 Here are some examples of Accuracy and Loss graphs.
 
@@ -185,8 +186,7 @@ The recall is calculated as the ratio between the number of Positive samples cor
 Positive(TP) to the total number of Positive samples(TP + FN). The recall measures the model's ability to detect
 Positive samples. **The higher the recall, the more positive samples detected.**
 The recall cares only about how the positive samples are classified. This is independent of how the
-negative samples are classified, e.g. for the precision. When the model classifies all the positive
-samples as Positive, then the recall will be 100% even if all the negative samples were
+negative samples are classified, e.g. for the precision. When the model classifies all the positive samples as Positive, then the recall will be 100% even if all the negative samples were
 incorrectly classified as Positive.
 
 - **F1-Score:**
@@ -196,7 +196,7 @@ precision and recall, and there is an uneven class distribution. It ranges from 
 indicates perfect precision and recall.
 
 - **Confusion Matrix:**
-It visually represent how the model scored in classifying never-seen-before images.
+It visually represents how the model scored in classifying never-seen-before images.
 
 [Know more about the metrics -1 ](https://blog.paperspace.com/deep-learning-metrics-precision-recall-accuracy/)
 
@@ -207,7 +207,7 @@ Here is an example of a confusion matrix:
 
 Ideally, you would want to have 1 in PredictedGood-TrueGood and 1 in PredictedDefective-TrueDefective
 
-The code for the confusion matrix is provided, but it all resort to this:
+The code for the confusion matrix is provided, but it all resorts to this:
 
 
 ```
@@ -232,7 +232,7 @@ plt.show()
 
 ## Image processing
 
-As of now, the model works but it is not that good. We need to optimize it a bit. And we can optimize it by feeding it with better data. How do we improve our data?
+As of now, the model works but it is not that good. I need to optimize it a bit. And I can do that by feeding it with better data. How do we improve our data?
 
 Via the python image processing library I thought of enhancing a bit more the data quality, showing to the model what were the actual feature it had to be trained on.
 
@@ -261,7 +261,7 @@ Later I will show you the difference it made regarding the metrics, but I can an
 
 ## A cute discovery: Texture Recognition
 
-Since I wanted to push the work a little bit forward and try something new, I decided to sudy a little bit Texture Recognition. Basically i computed the Gray-Level Co-occurence Matrix (GLCM) to etract the following feature: Contrast, Correlation, Energy and Homogeneity. But none showed some interesting results.
+Since I wanted to push the work a little bit forward and try something new, I decided to sudy a little bit Texture Recognition. Basically I computed the Gray-Level Co-occurence Matrix (GLCM) to etract the following feature: Contrast, Correlation, Energy and Homogeneity. But none showed some interesting results.
 
 So I kept studying and decided to apply the Gabor Filter to pictures. This filter has been shown to possess optimal localization properties in both spatial and frequency domains and thus is well-suited for texture segmentation problems. 
 
@@ -275,17 +275,17 @@ This filter tells us when a tyre is very very old, can detect the wrinkles in it
 ![Original](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Defective%20(878).jpg)
 
 
-**The gabor Filtered tyre:**
+**The Gabor Filtered tyre:**
 
 ![Gabor Filtered](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/gabor_defective.png)
 
 
-As you can see, all the wrinkles get accentuated. This is very cool.
+As you can see, all the wrinkles get accentuated. This is very cool!
 
 
 ## Final run: let's study the results
 
-I will show you now the different results we had with the various dataset. We tested the model resulted from the training on these 4 dataset with a test batch of pictures: 10 GOOD and 10 DEFECTIVE downloaded from the internet (of course, not part of the datasets)
+I will show you now the different results we had with the various dataset. We tested the model resulted from the training on these 4 datasets with a test batch of pictures: 10 GOOD and 10 DEFECTIVE downloaded from the internet (of course, not part of the datasets)
 
 - Dataset N.1 = Pictures dataset downloaded from internet
 - Dataset N.2 = Pictures dataset downloaded from internet **with contour on** 
@@ -339,9 +339,9 @@ I will show you now the different results we had with the various dataset. We te
 
 ## Room for improvement
 
-There is much more to do, starting from fine tuning the model better to  implement a precise defect detection on the tyre using [Mask_RNCC](https://github.com/matterport/Mask_RCNN)
+There is much more to do, starting from fine tuning the model  to  implement a precise defect detection on the tyre using [Mask_RNCC](https://github.com/matterport/Mask_RCNN)
 
 ## Final Notes
 
-This project could have not been complted succesfully without the help of [@Arkw0w](https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped running the model on his juicy NVIDIA RTX 2070Super
+This project could have not been completed succesfully without the help of [@Arkw0w](https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped me running the model on his juicy NVIDIA RTX 2070Super GPU.
 
