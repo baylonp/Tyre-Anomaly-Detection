@@ -282,5 +282,28 @@ I will show you now the different results we had with the various dataset. We te
 
   ![Datset2](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring2.png)
   ![Dataset_2_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_1856/contouring4.png)
-  
 
+
+  ### Dataset N.3
+
+  With this dataset we obtained:
+  - Precision = 0.86
+  - Recall = 0.85
+  - F1_score = 0.86 
+
+ ![Datset3](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/no_contouring_2.png)
+  ![Dataset_3_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/no_contouring_4.png)
+
+
+  ### Dataset N.4
+
+  With this dataset we obtained:
+  - Precision = 0.55
+  - Recall = 0.55
+  - F1_score = 0.55
+
+ ![Datset3](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/contouring_2.png)
+ ![Dataset_3_matrix](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/Dataset_2226/contouring_4.png)
+
+
+  
