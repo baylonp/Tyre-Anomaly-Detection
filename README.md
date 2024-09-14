@@ -8,7 +8,9 @@ As everything tho, without a project to actually test the theory it would have a
 
 The idea is to build a simple binary classificator that tells me if a tyre is GOOD or DEFECTIVE: let's start simple.
 
-TLDR:
+## TLDR:
+SKip it all go directly to the [final results](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#final-run-lets-study-the-results) :)
+
 
 
 ## Table of Content
