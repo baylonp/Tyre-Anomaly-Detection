@@ -56,7 +56,7 @@ Let's start by quoting some words I have been found again and again in the endle
 
 `A deep learning model is as agood as its dataset`
 
-As I see, this it ultimately true. I started using a dataset of about 2000 pictures of tyres, in which 65% were GOOD tyres, adn 45% DEFECTIVE tyres, but after some trials and errors, I decided to get some help by a friend of mine (Lorenzo Cozzani) and go ask car dealers to take pictures of tyres. What we were looking for was GOOD tyres pictures, especially tread pictures and also close up of defects. We managed to increase the dataset by 500 pictures, evenly distributed among the 2 categories we were lacking.
+As I see, this it ultimately true. I started using a dataset of about 2000 pictures of tyres, in which 65% were GOOD tyres, adn 45% DEFECTIVE tyres, but after some trials and errors, I decided to get some help by a colleague of mine [@Arkw0w](https://github.com/Arkw0w) and go ask car dealers to take pictures of tyres. What we were looking for was GOOD tyres pictures, especially tread pictures and also close up of defects. We managed to increase the dataset by 500 pictures, evenly distributed among the 2 categories we were lacking.
 
 
 ## What is a deep learning model and where to start building one?
@@ -343,5 +343,5 @@ There is much more to do, starting from fine tuning the model better to  impleme
 
 ## Final Notes
 
-This project could have not been complted succesfully without the help of [Lorenzo Cozzani](https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped running the model on his juicy NVIDIA RTX 2070Super
+This project could have not been complted succesfully without the help of [@Arkw0w](https://github.com/Arkw0w) who spent time with me taking pictures of tyres and helped running the model on his juicy NVIDIA RTX 2070Super
 
