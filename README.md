@@ -46,7 +46,7 @@ What I used is:
 
 - Jupyter Notebook in Anaconda environment for Linux
 - NVIDIA RTX 2070Super (Offered by [@ArkWow](https://github.com/Arkw0w))
-- Among all the libraries, I worked alot with Keras and Tensorflow an OpenCV
+- Among all the libraries, I worked alot with Keras and Tensorflow and OpenCV
 
 
 
