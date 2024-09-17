@@ -25,6 +25,7 @@ Check out the Jupyter Notebook [here](https://github.com/baylonp/Tyre-Anomaly-De
 - [Let's Run It](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#lets-run-it)
 - [The Most Importan Part: How To Validate A Model?](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#the-most-importan-part-how-to-validate-a-model)
 - [Image Processing](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#image-processing)
+    - [Data Enhancement](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/README.md#data-enhancement)
 - [A Cute Discovery: Texture Recognition](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#a-cute-discovery-texture-recognition)
 - [Final Run: Let's Study The Results](https://github.com/baylonp/Tyre-Anomaly-Detection?tab=readme-ov-file#final-run-lets-study-the-results)
   
