@@ -277,7 +277,7 @@ As you can see, this is the "before" the action was applied
 
 And this is the aft"after" the action was applied
 
-![After]()
+![After](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/after_action.jpg)
 
 
 ## A cute discovery: Texture Recognition
