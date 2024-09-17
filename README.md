@@ -259,6 +259,19 @@ This is the result.
 Later I will show you the difference it made regarding the metrics, but I can ancticipate you that the results were not that better, I would say even worse.
 
 
+## Data enhancement
+
+In order to provide a consistent contouring across all images, we had to do a bit of retouching.
+Since the contouring is based on treshold RGB values (lo= 100, hi= 200) we had to ensure that all of our images had a "leveled" exposure (following the [middle-gray parameter](https://en.wikipedia.org/wiki/Middle_gray)) , that is, basically how the camera exposure meter works by default.
+
+Since going through all the photos manually is not a humanly feasible task, we automated the process with Photoshop (GIMP can be used aswell).
+using the built-in function "Image Processor" the source folder was scanned and an action has been applied to all the files. The action had just three automatic adjustments: Auto-Tone, Auto-Contrast and Auto-Color. Then it saved the files onto a different folder, for easy navigation afterwards.
+
+This process ensured that all the images had a similar histogram, with values raging from 0 to 255 evenly, also fixing over/under-exposed images.
+This lead to a more consistent contouring, minimizing the risk of highlighting the wrong portion(s) of the image(s) due to the different luma values in RGB pixels
+
+
+
 ## A cute discovery: Texture Recognition
 
 Since I wanted to push the work a little bit forward and try something new, I decided to sudy a little bit Texture Recognition. Basically I computed the Gray-Level Co-occurence Matrix (GLCM) to etract the following feature: Contrast, Correlation, Energy and Homogeneity. But none showed some interesting results.
