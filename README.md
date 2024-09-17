@@ -269,8 +269,15 @@ Since going through all the photos manually is not a humanly feasible task, we a
 using the built-in function "Image Processor" the source folder was scanned and an action has been applied to all the files. The action had just three automatic adjustments: Auto-Tone, Auto-Contrast and Auto-Color. Then it saved the files onto a different folder, for easy navigation afterwards.
 
 This process ensured that all the images had a similar histogram, with values raging from 0 to 255 evenly, also fixing over/under-exposed images.
-This lead to a more consistent contouring, minimizing the risk of highlighting the wrong portion(s) of the image(s) due to the different luma values in RGB pixels
+This lead to a more consistent contouring, minimizing the risk of highlighting the wrong portion(s) of the image(s) due to the different luma values in RGB pixels.
 
+As you can see, this is the "before" the action was applied
+![Before](https://github.com/baylonp/Tyre-Anomaly-Detection/blob/main/images/before_action.jpg)
+
+
+And this is the aft"after" the action was applied
+
+![After]()
 
 
 ## A cute discovery: Texture Recognition
